@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environment
+.env
+.env.*
+
+# Streamlit
+.streamlit/
+
+# Temporary files
+temp/
+*.log
+*.bak
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated reports
+reports/
+
+# Python cache
+*.sqlite3
+*.db
