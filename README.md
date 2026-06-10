@@ -61,19 +61,19 @@ The **RPA Discovery Intelligence Platform** automates the most time-consuming pa
 ┌─────────────────────▼───────────────────────────┐
 │              Agentic AI Layer                    │
 │                                                  │
-│  Agent 1          Agent 2          Agent 3       │
+│  Prompt 1          Prompt 2       Prompt 3       │
 │  Process       Complexity       Dependency       │
 │  Analyzer      Assessor         Analyzer         │
 │                                                  │
-│  Agent 4          Agent 5                        │
+│  Agent 4         Prompt 5       Unified ICA Agent|                 
 │  Migration       Effort                          │
 │  Mapper          Estimator                       │
 │                                                  │
-│  ┌─────────────────────────────────────────┐    │
-│  │  Workbook Complexity Engine              │    │
-│  │  AI metric counts → bucket → weighted   │    │
-│  │  matrix score → complexity label        │    │
-│  └─────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────┐     │
+│  │  Workbook Complexity Engine             │    │
+│  │  AI metric counts → bucket → weighted   │     │
+│  │  matrix score → complexity label        │     │
+│  └─────────────────────────────────────────┘     │
 └─────────────────────┬───────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────┐
@@ -296,22 +296,25 @@ The five IBM ICA agents run in sequence. Each receives the parsed Blue Prism dat
 BluePrismParser
     │  parsed_data (processes, objects, queues, env vars)
     ▼
-Agent 1: ProcessAnalyzerAgent
+Prompt 1: ProcessAnalyzerAgent
     │  process_analysis (process name, description, AI-generated steps)
     ▼
-Agent 2: ComplexityAssessorAgent
+Prompt 2: ComplexityAssessorAgent
     │  ai_metric_analysis (metric counts + rationale)
     │  → compute_workbook_complexity()
     │  complexity_assessment (rating, score, drivers, risk factors)
     ▼
-Agent 3: DependencyAnalyzerAgent
+Prompt 3: DependencyAnalyzerAgent
     │  dependency_analysis (applications, files, databases, APIs)
     ▼
-Agent 4: MigrationMapperAgent  ← migration_mapping.xlsx
+Prompt 4: MigrationMapperAgent  ← migration_mapping.xlsx
     │  migration_mapping (source process → target component + architecture)
     ▼
-Agent 5: EffortEstimatorAgent  ← effort_matrix.json
+Prompt 5: EffortEstimatorAgent  ← effort_matrix.json
     │  effort_estimation (total hours/days/weeks, activity breakdown)
+    ▼
+ICA Agent : Unified Orchestrator Agent 
+    │  Return Responses based on the prompt
     ▼
 ReportGenerator
     │  Migration_Assessment_*.xlsx
